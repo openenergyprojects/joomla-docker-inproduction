@@ -1,0 +1,11 @@
+---
+  haproxy:    # https://hub.docker.com/r/bringnow/haproxy-letsencrypt/
+    image: bringnow/haproxy-letsencrypt:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/etc/letsencrypt:/etc/letsencrypt"
+      - "/var/acme-webroot:/var/acme-webroot"
+      - "/srv/docker/smartprojects/haproxy.cfg:/etc/haproxy/haproxy.cfg"  # inspired by https://github.com/camptocamp/docker-haproxy-luasec
+    restart: always
