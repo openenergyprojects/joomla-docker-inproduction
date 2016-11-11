@@ -4,7 +4,7 @@ This is a guide on how to quickly put joomla in production with docker in few mi
 Use this repo docker-compose-joomla.yml
 
 ## Preparations before run:
-1. Create the static folders, where your data will be saved:
+1. Create the static folders, where your data will be saved:   
 ``` mkdir -p /srv/docker/smartprojects/mysql ```   
 ``` mkdir -p /srv/docker/smartprojects/joomla_www ```   
 ``` mkdir -p /srv/docker/smartprojects/phpmyadmin/sessions ```   
