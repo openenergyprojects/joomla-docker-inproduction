@@ -4,8 +4,12 @@
     ports:
       - "80:80"
       - "443:443"
+#    links:
+#      - reaction
     volumes:
       - "/etc/letsencrypt:/etc/letsencrypt"
-      - "/var/acme-webroot:/var/acme-webroot"
-      - "/srv/docker/smartprojects/haproxy.cfg:/etc/haproxy/haproxy.cfg"  # inspired by https://github.com/camptocamp/docker-haproxy-luasec
+      - "/var/acme-webroot:/var/lib/haproxy/"
+      - "~/shop/haproxy/haproxy.cfg:/etc/haproxy/haproxy.cfg"    # https://github.com/camptocamp/docker-haproxy-luasec
+      #- "~/shop/haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg"    # https://github.com/camptocamp/docker-haproxy-luasec
     restart: always
+
