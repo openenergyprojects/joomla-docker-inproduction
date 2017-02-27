@@ -25,3 +25,4 @@ On rm, you will not lose data, as it's kept outside, under /srv/docker/smartproj
 
 ## Next steps:   
 To expose it to the internet, you will want to put an nginx/haproxy in front. I recommend: bringnow/haproxy-letsencrypt:latest   
+
